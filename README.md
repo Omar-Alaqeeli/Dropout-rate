@@ -1,21 +1,20 @@
-# Dropout-rate
-# install.packages("gplots")
-# if (!requireNamespace("BiocManager", quietly = TRUE))
-#   install.packages("BiocManager")
-# BiocManager::install("ComplexHeatmap")
-# install.packages("grid")
-# if (!requireNamespace("BiocManager", quietly = TRUE))
-#   install.packages("BiocManager")
-# BiocManager::install("ComplexHeatmap")
-# install.packages("colorRamp2")
-# install.packages("magick")
-# install.packages("gplots")
-# install.packages("heatmap3")
-# suppressPackageStartupMessages(library(dplyr))
-# install.packages("imager")
-# install.packages("tidyverse")
-# install.packages("fields")
-# 
+install.packages("gplots")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+install.packages("BiocManager")
+BiocManager::install("ComplexHeatmap")
+install.packages("grid")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("ComplexHeatmap")
+install.packages("colorRamp2")
+install.packages("magick")
+install.packages("gplots")
+install.packages("heatmap3")
+suppressPackageStartupMessages(library(dplyr))
+install.packages("imager")
+install.packages("tidyverse")
+install.packages("fields")
+
 library(xtable)
 library(scales)
 library("RColorBrewer")
@@ -107,18 +106,18 @@ zeros_table <- data.frame(
 
 zeros_table$
 
-# col <- colorRamp2(breaks = c(0, 1), colors = c( "white", "dark red"))
-# pdf(file = paste0("t/", dataset_id, ".pdf"))
-# Heatmap(dataset[1:20,1:288], 
-#         name = "Gene Expression", 
-#         col = col,
-#         column_title = dataset_id, row_title = "Gene", 
-#         show_row_names = FALSE, show_column_names = F,
-#         #use_raster = FALSE,
-#         #k = 2, # k-means
-#         row_names_gp = gpar(fontsize = 7) #   Text size for row names
-# )
-# dev.off()
+col <- colorRamp2(breaks = c(0, 1), colors = c( "white", "dark red"))
+pdf(file = paste0("t/", dataset_id, ".pdf"))
+Heatmap(dataset[1:20,1:288], 
+        name = "Gene Expression", 
+         col = col,
+         column_title = dataset_id, row_title = "Gene", 
+         show_row_names = FALSE, show_column_names = F,
+         #use_raster = FALSE,
+         #k = 2, # k-means
+         row_names_gp = gpar(fontsize = 7) #   Text size for row names
+ )
+ dev.off()
 
 
 
